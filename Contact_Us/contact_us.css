@@ -99,7 +99,7 @@ span {
   right: 20px;
   width: 50px;
   height: 50px;
-  background: white url(/open.png);
+  background: white url(open.png);
   z-index: 1;
   cursor: pointer;
   z-index: 2;
@@ -107,7 +107,7 @@ span {
 }
 
 #toggleIcon.active {
-  background: white url(/close.png);
+  background: white url(close.png);
 }
 
 .form {
@@ -200,6 +200,7 @@ textarea {
   height: 100px;
   font-weight: bold;
   border: 1.5px solid black;
+  padding: 20px;
 }
 
 textarea:valid {
@@ -212,7 +213,7 @@ textarea:valid {
   margin: 3vh auto;
 }
 
-button {
+#submit {
   background: none;
   border: 2px solid #58b436;
   font: inherit;
@@ -221,14 +222,14 @@ button {
   margin-bottom: 20vh;
 }
 
-button {
+#submit {
   color: #58b436;
   font-weight: bold;
   transition: 0.25s;
 }
 
-button:hover,
-button:focus {
+#submit:hover,
+#submit:focus {
   border: 3px solid #58b436;
   color: black;
 }
@@ -244,6 +245,15 @@ button:focus {
   box-shadow:
     0 0 0 0 #7db569,
     inset 6em 3.5em 0 0 rgba(125, 181, 105, 0.75);
+}
+
+#error_message {
+  margin-bottom: 20px;
+  background: #fe8b8e;
+  padding: 0px;
+  text-align: center;
+  font-size: 14px;
+  transition: all 0.5s ease;
 }
 
 .header-image {
