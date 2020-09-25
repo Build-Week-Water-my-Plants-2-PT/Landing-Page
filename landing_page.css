@@ -118,9 +118,10 @@ a {
 }
 
 .main {
-  height: 85vh;
-  width: 1920px;
+  width: 100%;
+  height: auto;
 }
+
 .text {
   display: flex;
   flex-direction: column;
@@ -137,21 +138,27 @@ h1 {
   margin-bottom: 6%;
   color: white;
   font-variant: small-caps;
-  font-size: 6rem;
+  font-size: clamp(2rem, 10vw, 6rem);
 }
 
 .typeWords {
   color: #7db569;
 }
 
+.top {
+  height: 0px;
+  width: 0px;
+  margin-left: 5.2%;
+
+}
+
 .fade {
-  background: #b5697d;
-  margin-left: 12.5%;
+  background: #669966;
   font-variant: small-caps;
   font-family: "Josefin Sans", sans-serif;
   color: white;
-  font-size: 2rem;
-  border: 3px solid #b5697d;
+  font-size: clamp(0.7rem, 3vw, 2rem);
+  border: 3px solid #5b995b;
   padding: 14px 60px;
   overflow: hidden;
   transition: 1s ease;
@@ -159,7 +166,7 @@ h1 {
 
 .fade:hover {
   content: "";
-  background: rgba(181, 105, 125, 40%);
+  background: rgba(102, 153, 102, 40%);
 }
 
 .container {
@@ -173,8 +180,8 @@ h1 {
 }
 
 h2 {
-  color: #b5697d;
-  font-size: 3rem;
+  color: #669966;
+  font-size: clamp(2rem, 7vw, 3.5rem);
   font-style: cursive;
   text-transform: uppercase;
   text-align: center;
@@ -190,7 +197,7 @@ h2 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 2px solid #b5697d;
+  border: 2px solid#669966;
   overflow: hidden;
   box-shadow: 11px 6px 40px -5px rgba(61, 66, 61, 1);
 }
@@ -223,7 +230,7 @@ h2 {
   width: 70%;
   text-align: center;
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 3vw, 1.5rem);
   padding-top: 20%;
 }
 
@@ -233,7 +240,7 @@ h2 {
 
 .mission p {
   width: 70%;
-  font-size: 1.5rem;
+  font-size: clamp(1.5rem, 5vw, 2rem);
   padding-top: 10vh;
   margin: 0 auto;
   text-align: center;
@@ -246,16 +253,18 @@ h2 {
 .btn_wrap {
   padding: 20vh 0 20vh 0;
   display: flex;
+  width: 100%;
   justify-content: center;
+  margin: 0 auto;
 }
 
 .cta {
-  background: #b5697d;
+  background: #669966;
   font-variant: small-caps;
   font-family: "Josefin Sans", sans-serif;
   color: white;
   font-size: 2rem;
-  border: 3px solid #b5697d;
+  border: 3px solid #5b995b;
   padding: 14px 60px;
   overflow: hidden;
   transition: 1s ease;
@@ -267,7 +276,7 @@ h2 {
 
 .cta:hover {
   content: "";
-  background: rgba(181, 105, 125, 40%);
+  background: rgba(102, 153, 102, 40%);
 }
 
 footer {
@@ -281,7 +290,7 @@ footer {
 
 footer p {
   font-weight: bold;
-  font-size: 1.25rem;
+  font-size: clamp(1rem, 3%, 1.5rem);
 }
 
 footer ul li {
@@ -308,35 +317,51 @@ footer ul li a {
     align-items: center;
     height: auto;
   }
+
   .box {
     margin-bottom: 15vh;
     height: 400px;
   }
-  .main {
-    width: 1380px;
-    height: 900px;
+}
+
+@media screen and (max-width: 1200px) {
+  .text {
+    top: 15%
+  }
+
+  h1 {
+    margin: 5%;
+    margin-bottom: 3%;
+  }
+
+  .fade {
+    padding: 10px 45px;
   }
 }
+
+
 @media screen and (max-width: 600px) {
   header {
     height: 10vh;
   }
-  h1 {
-    font-size: 4rem;
-  }
-  .main {
-    width: 600px;
-    height: 350px;
-  }
+
   .text {
     top: 8%;
   }
+
   .fade {
-    font-size: 1.2rem;
+    padding: 6px 30px;
   }
+
   .cta {
     font-size: 1.2rem;
   }
+
+  .cta:first-of-type {
+    margin-left: 40px;
+    margin-right: 60px;
+  }
+
   #menu-overlay ul li a {
     font-size: 2rem;
   }
@@ -354,22 +379,29 @@ footer ul li a {
     height: 300px;
     width: 300px;
   }
+
   .box:nth-child(2) {
     height: 360px;
   }
+
   .box:nth-child(2) p {
     padding-top: 14vh;
   }
+
   .cta {
-    padding: 10px 30px;
+    padding: 6px 20px;
   }
+
   .cta:first-of-type {
-    margin-right: 30px;
+    margin-left: 40px;
+    margin-right: 20px;
   }
-  h1 {
-    font-size: 3rem;
-  }
+
   .text {
     top: 10%;
+  }
+
+  .fade {
+    padding: 4px 20px;
   }
 }

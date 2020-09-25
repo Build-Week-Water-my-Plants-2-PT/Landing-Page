@@ -1,0 +1,17 @@
+{
+  "folders": [
+	{
+		"path": "."
+	},
+	{
+		"path": "..\\..\\Water My Plants\\profile_photos"
+	},
+	{
+		"path": "..\\Landing_Page\\Images"
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "About_Us",
+    "liveServer.settings.port": 5501
+  }
+}
